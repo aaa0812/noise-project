@@ -3,14 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
     <title>Document</title>
 </head>
 <body>
-<header>
-</header>
+    <header>
+        <a href="index.html">Noise</a>
+        <nav>
+            <ul>
+                <li><a href="index.html">Couleurs</a></li>
+                <li><a href="">Random</a></li>
+                <li><a href="">Exemples</a></li>
+            </ul>
+        </nav>
+    </header>
     <main>
+        <img src="" alt="" class="noise-img"/>
+         <form class="noise-form" method="get">
+            <label for="red">
+                Red
+                <input id="red" name="red" placeholder="212" class="red-input" type="number" required/>
+            </label>
+            <label for="green">
+                Green
+                <input id="green" name="green" placeholder="212" class="green-input" type="number"/>
+            </label>
+            <label for="blue">
+                Blue
+                <input id="blue" name="blue" placeholder="212" class="blue-input" type="number"/>
+            </label>
+            <button type="submit" id="noise-btn">Generate</button>
+        </form>
     </main>
-    
     <footer>
     </footer>
 </body>
