@@ -14,9 +14,9 @@
     */
    function handleSubmit(e) {
        e.preventDefault();
-       let formData = new FormData(e.target);
+       let formData = new FormData(e.target); //crée un FormData à partir de l'élément html pour avoir accès aux données des input
 
-       datas = Object.fromEntries(formData);
+       datas = Object.fromEntries(formData); //met les données dans un objet : { red : num, green: num, blue: num } pour y accéder facilement
        getRGBImg(datas.red, datas.green, datas.blue);     
     }
     
