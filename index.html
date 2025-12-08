@@ -8,17 +8,21 @@
 </head>
 <body>
     <header>
-        <a href="index.html">Noise</a>
+        <a href="index.html">MSN</a>
         <nav>
             <ul>
                 <li><a href="index.html">Couleurs</a></li>
                 <li><a href="">Random</a></li>
                 <li><a href="">Exemples</a></li>
+                <li><a href="">About</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <h1>Make Some Noise</h1>
+        <p>With Make Some Noise, generate everything you want ! Except if it is not noise.</p>
         <img src="" alt="" class="noise-img"/>
+        <p>colors</p>
          <form class="noise-form" method="get">
             <label for="red">
                 Red
@@ -31,6 +35,11 @@
             <label for="blue">
                 Blue
                 <input id="blue" name="blue" placeholder="212" class="blue-input" type="number"/>
+            </label>
+            <p>OR</p>
+            <label for="hex">
+                HEX
+                <input id="hex" name="hex" placeholder="#F86932" class="hex-input" type="text"/>
             </label>
             <button type="submit" id="noise-btn">Generate</button>
         </form>
