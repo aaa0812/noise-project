@@ -2,6 +2,7 @@
     --background-color : #0A1117;
     --light-blue : #ACECEE;
     --darker-blue : #0099FF;
+    --shadow-blue : #0099ff90;
     --pink: #FF0088;
 }
 
@@ -25,7 +26,47 @@ body {
 }
 
 h1 {
+    position: relative;
     font-family: 'Source Code';
     font-style: italic;
     font-size: 4rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 20px var(--shadow-blue);
+}
+
+h1::before,
+h1::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h1::before {
+    color: var(--darker-blue);
+    z-index: -2;
+    animation: glitch-anim-1 2s infinite linear alternate-reverse;
+}
+
+h1::after {
+    color: var(--pink);
+    z-index: -1;
+    animation: glitch-anim-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-anim-1 {
+    0%, 100% { transform: none; }
+    20% { transform: translate(-3px, 2px); }
+    40% { transform: translate(-2px, -2px); }
+    60% { transform: translate(1px, 2px); }
+    80% { transform: translate(2px, -1px); }
+}
+
+@keyframes glitch-anim-2 {
+    0%, 100% { transform: none; }
+    25% { transform: translate(2px, -1px); }
+    50% { transform: translate(-3px, 1px); }
+    75% { transform: translate(1px, -2px); }
 }
