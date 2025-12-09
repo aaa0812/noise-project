@@ -1,0 +1,31 @@
+:root {
+    --background-color : #0A1117;
+    --light-blue : #ACECEE;
+    --darker-blue : #0099FF;
+    --pink: #FF0088;
+}
+
+@font-face {
+  font-family: 'Source Code';
+  font-style: normal;
+  font-display: block;
+  src: url(/src/fonts/SourceCodePro-VariableFont_wght.ttf);
+}
+
+@font-face {
+  font-family: 'Source Code';
+  font-style: italic;
+  font-display: block;
+  src: url(/src/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--light-blue);
+}
+
+h1 {
+    font-family: 'Source Code';
+    font-style: italic;
+    font-size: 4rem;
+}
