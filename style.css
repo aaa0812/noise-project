@@ -70,3 +70,36 @@ h1::after {
     50% { transform: translate(-3px, 1px); }
     75% { transform: translate(1px, -2px); }
 }
+
+legend {
+    padding: 0 8px;
+}
+
+fieldset{
+    border-width: 2px;
+    border-radius: 16px;
+}
+
+.content{
+    display:flex;
+    flex-direction: row;
+}
+
+.colorpanel{
+    display: flex;
+    flex-direction: row;
+    max-width: 500px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    text-align: center;
+}
+
+body {
+    text-align: center;
+}
