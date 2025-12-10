@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
     <header>
         <a href="index.html">MSN</a>
@@ -24,41 +26,41 @@
         <h1 data-text="Make Some Noise">Make Some Noise</h1>
         <p>With Make Some Noise, generate everything you want ! Except if it is not noise.</p>
         <div class="content">
-            <div class="colorpanel">
-                <div class="image-slot">
-                    <img src="" alt="" class="noise-img"/>
-                 </div>
+            <img src="https://placecats.com/300/300" alt="" class="noise-img" />
             <fieldset>
                 <legend>Colors</legend>
-         <form class="noise-form" method="get">
-            <label for="red">
-                Red
-                <br>
-                <input id="red" name="red" placeholder="212" class="red-input" type="number" required/>
-            </label>
-            <label for="green">
-                Green
-                <br>
-                <input id="green" name="green" placeholder="212" class="green-input" type="number"/>
-            </label>
-            <label for="blue">
-                Blue
-                <br>
-                <input id="blue" name="blue" placeholder="212" class="blue-input" type="number"/>
-            </label>
-            <p>OR</p>
-            <label for="hex">
-                HEX
-                <br>
-                <input id="hex" name="hex" placeholder="#F86932" class="hex-input" type="text"/>
-            </label>
-            <button type="submit" id="noise-btn">Generate</button>
-            </form>
+                <form class="noise-form" method="get">
+                    <label for="red">
+                        Red
+                        <input id="red" name="red" placeholder="212" class="red-input" type="number" required />
+                    </label>
+                    <label for="green">
+                        Green
+                        <input id="green" name="green" placeholder="212" class="green-input" type="number" />
+                    </label>
+                    <label for="blue">
+                        Blue
+                        <input id="blue" name="blue" placeholder="212" class="blue-input" type="number" />
+                    </label>
+                    <p class="separator">OR</p>
+                    <label for="hex">
+                        HEX
+                        <input id="hex" name="hex" placeholder="#F86932" class="hex-input" type="text" />
+                    </label>
+                    <button type="submit" id="noise-btn">Generate</button>
+                </form>
             </fieldset>
-            </div>
+            <fieldset class="advanced">
+                <legend>Advanced</legend>
+                <label for="nb-tiles">
+                    Number of tiles
+                    <input id="nb-tiles" name="nb-tiles" type="number" required />
+                </label>
+            </fieldset>
         </div>
     </main>
     <footer>
     </footer>
 </body>
+
 </html>
