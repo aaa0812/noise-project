@@ -17,10 +17,11 @@
        let formData = new FormData(e.target); //crée un FormData à partir de l'élément html pour avoir accès aux données des input
 
        datas = Object.fromEntries(formData); //met les données dans un objet : { red : num, green: num, blue: num } pour y accéder facilement
+       console.log(datas)
        getRGBImg(datas.red, datas.green, datas.blue);     
     }
     
-    async function getRGBImg(red, green, blue) {
+    async function getRGBImg(red, green, blue, nbtiles=50) {
         const noiseImgEl = document.querySelector('.noise-img'); //récupère l'élément img dans le DOM
 
         try {
