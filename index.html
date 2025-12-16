@@ -14,9 +14,9 @@
         <a href="index.html">MSN</a>
         <nav>
             <ul>
-                <li><a href="index.html">Couleurs</a></li>
+                <li><a href="index.html">Home</a></li>
                 <li><a href="random.html">Random</a></li>
-                <li><a href="exemples.html">Exemples</a></li>
+                <li><a href="exemples.html">Examples</a></li>
                 <li><a href="about.html">About</a></li>
             </ul>
         </nav>
@@ -49,9 +49,34 @@
             </fieldset>
             <fieldset class="advanced">
                 <legend>Advanced</legend>
-                <label for="nb-tiles">
-                    Number of tiles
-                    <input id="nb-tiles" name="nb-tiles" type="number" />
+                <label for="nbTiles">
+                    Number of tiles (1-50)
+                    <input id="nbTiles" name="nbTiles" type="number"/>
+                </label>
+                <label for="tileSize">
+                    Tilesize (1-20)
+                    <input id="tileSize" name="tileSize" type="number"/>
+                </label>
+                <label for="borderWidth">
+                    Borderwidth (0-15)
+                    <input id="borderWidth" name="borderWidth" type="number"/>
+                </label>
+                <label>
+                    <span>Brightness</span>
+                    <input id="brightnessMode" name="colorCalculationmode" type="radio" value="brightness" checked />
+                </label>
+                <label>
+                    <span>Around</span>
+                    <input id="aroundMode" name="colorCalculationmode" type="radio" value="around" />
+                    
+                </label>
+                <label for="brightnessMultiplicator">
+                    Brightness Multiplicator
+                    <input id="brightnessMultiplicator" name="brightnessMultiplicator" type="number"/>
+                </label>
+                <label for="brightnessSteps">
+                    Bright Steps
+                    <input id="brightnessSteps" name="brightnessSteps" type="number"/>
                 </label>
             </fieldset>
         </form>

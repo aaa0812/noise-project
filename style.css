@@ -20,6 +20,32 @@
     src: url(/src/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
 }
 
+header {
+    align-items: center;
+    display : flex;
+    justify-content: space-between;
+    padding: 23px;
+    border: solid 2px var(--light-blue);
+    padding-block: 0.35em 0.625em;
+    padding-inline: 0.75em;
+    border-width: 2px;
+    border-radius: 16px;
+}
+
+header ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+
+}
+
+a{
+    text-decoration: none;
+    color: var(--light-blue);
+}
+
+/*-------------------------------------------------------------------------------------------------*/
+
 body {
     background-color: var(--background-color);
     color: var(--light-blue);
