@@ -30,7 +30,7 @@
                 <legend>Colors</legend>
                 <label for="red">
                     Red
-                    <input id="red" name="red" placeholder="212" class="red-input" type="number" required />
+                    <input id="red" name="red" placeholder="212" class="red-input" type="number" />
                 </label>
                 <label for="green">
                     Green
@@ -60,14 +60,13 @@
                     Borderwidth (0-15)
                     <input id="borderWidth" name="borderWidth" type="number"/>
                 </label>
-                <label>
-                    <span>Brightness</span>
-                    <input id="brightnessMode" name="colorCalculationmode" type="radio" value="brightness" checked />
+                <label for="brightnessMode">
+                    Brightness
+                    <input id="brightnessMode" name="mode" type="radio" value="brightness" checked />
                 </label>
-                <label>
-                    <span>Around</span>
-                    <input id="aroundMode" name="colorCalculationmode" type="radio" value="around" />
-                    
+                <label for="aroundMode">
+                    Around
+                    <input id="aroundMode" name="mode" type="radio" value="around" />  
                 </label>
                 <label for="brightnessMultiplicator">
                     Brightness Multiplicator
