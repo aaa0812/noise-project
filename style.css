@@ -440,45 +440,23 @@ form p {
         align-items: center;
     }
 
-    .radio-container {
-        display: block;
-    }
 }
 
-@media (max-width: 768px) {
-      header {
-    flex-wrap: wrap;
-    gap: 16px;
-    }
+/*-------------------------------------------------------------------------------------------------*/
 
-    nav {
-        width: 100%;
-    }
-
-    nav ul {
-        flex-direction: column;
-        gap: 16px;
-        padding: 16px;
-        border-radius: 12px;
-        border: 2px solid var(--light-blue);
-        box-shadow: 0 0 20px var(--shadow-blue), 0 0 10px var(--pink);
-
-        display: none;
-    }
-
-    nav ul.active {
-        display: flex;
-    }
-
-    .burger {
-        display: block;
-    }
-        .examples-img{
-        grid-template-columns: 1fr;
-    }
-.examples-img {
-    grid-column:auto;
-    grid-row:auto;
-    height:300px;
+footer {
+    width: 80%;
+    display: grid;
 }
+
+footer ul {
+    gap: 32px;
+    list-style: none;
+}
+
+.footer {
+    align-items: center;
+    justify-content: space-around;
+    text-align: start;
+    grid-column: 2 / 3;
 }
