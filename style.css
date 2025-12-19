@@ -207,11 +207,8 @@ form {
   background-color: var(--background-color);
   padding: 12px;
   border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
-  transition: 
-    transform 0.3s ease,
-    box-shadow 0.3s ease,
-    filter 0.3s ease;
+  border: solid 2px;
+  box-shadow: 0 0 24px var(--shadow-blue), 0 0 12px var(--pink), inset 0 0 12px var(--shadow-blue), inset 0 0 6px var(--pink);
 }
 
 .examples-img img:nth-child(1) {
@@ -249,11 +246,6 @@ form {
   grid-row: 3 / 4;
 }
 
-.examples-img img:hover {
-  transform: translateY(-6px) scale(1.02);
-  box-shadow: 0 20px 45px rgba(0,0,0,0.6);
-  filter: brightness(1.05);
-}
 /*---------------------------------------css images page exemple----------------------------------------------*/
 legend {
     font-size: 1.5rem;
