@@ -449,6 +449,25 @@ form p {
     }
 }
 
+/*----------------------------------------------------FOOTER---------------------------------------------------------*/
+
+footer {
+    width: 80%;
+    display: grid;
+}
+
+footer ul {
+    gap: 32px;
+    list-style: none;
+}
+
+.footer {
+    align-items: center;
+    justify-content: space-around;
+    text-align: start;
+    grid-column: 2 / 3;
+}
+
 
 @media screen and (min-width: 760px) {
 
@@ -483,9 +502,6 @@ form p {
         align-items: center;
     }
 
-    .radio-container {
-        display: block;
-    }
 }
 
 @media (max-width: 768px) {
