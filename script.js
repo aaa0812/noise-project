@@ -8,7 +8,7 @@
         noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit   
     }
     initBurgerMenu();
-
+    
     function initBurgerMenu() {
     const burger = document.querySelector('.burger');
     const menu = document.querySelector('nav ul');
