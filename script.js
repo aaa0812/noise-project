@@ -7,6 +7,18 @@
 
         noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit   
     }
+    initBurgerMenu();
+
+    function initBurgerMenu() {
+    const burger = document.querySelector('.burger');
+    const menu = document.querySelector('nav ul');
+
+    if (!burger || !menu) return;
+
+    burger.addEventListener('click', () => {
+        menu.classList.toggle('active');
+    });
+}
 
     /**
      * Fonction gérant la soumission du formulaire
@@ -37,6 +49,7 @@
         } catch (er) {
             console.error(er.message);// affiche l'erreur dans la console
         }
+        
     }
 }())
 

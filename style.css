@@ -32,6 +32,15 @@ header {
     border-radius: 16px;
 }
 
+.burger {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--light-blue);
+  font-size: 2rem;
+  cursor: pointer;
+}
+
 header ul {
     display: flex;
     gap: 32px;
@@ -246,6 +255,7 @@ form {
   grid-row: 3 / 4;
 }
 
+
 /*---------------------------------------css images page exemple----------------------------------------------*/
 legend {
     font-size: 1.5rem;
@@ -433,5 +443,42 @@ form p {
     .radio-container {
         display: block;
     }
+}
 
+@media (max-width: 768px) {
+      header {
+    flex-wrap: wrap;
+    gap: 16px;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        border-radius: 12px;
+        border: 2px solid var(--light-blue);
+        box-shadow: 0 0 20px var(--shadow-blue), 0 0 10px var(--pink);
+
+        display: none;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .burger {
+        display: block;
+    }
+        .examples-img{
+        grid-template-columns: 1fr;
+    }
+.examples-img {
+    grid-column:auto;
+    grid-row:auto;
+    height:300px;
+}
 }
