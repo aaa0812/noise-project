@@ -5,20 +5,18 @@
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
 
-        noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit   
+        noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit
+        initBurgerMenu();
     }
-    initBurgerMenu();
-    
+
     function initBurgerMenu() {
-    const burger = document.querySelector('.burger');
-    const menu = document.querySelector('nav ul');
+        const burger = document.querySelector('.burger');
+        const menu = document.querySelector('nav ul');
 
-    if (!burger || !menu) return;
-
-    burger.addEventListener('click', () => {
-        menu.classList.toggle('active');
-    });
-}
+        burger.addEventListener('click', () => {
+            menu.classList.toggle('active');
+        });
+    }
 
     /**
      * Fonction gérant la soumission du formulaire
@@ -49,7 +47,7 @@
         } catch (er) {
             console.error(er.message);// affiche l'erreur dans la console
         }
-        
+
     }
 }())
 
