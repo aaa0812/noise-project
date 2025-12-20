@@ -8,10 +8,9 @@
         const body = document.querySelector('body');
         const random = document.querySelector('.random-btn');
 
-       if (random) {
-        random.addEventListener("click", handleRandom);
-
-       }
+        if (random) {
+            random.addEventListener("click", handleRandom);
+        }
 
         if (noiseForm) {
             noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit
@@ -35,7 +34,6 @@
     async function handleRandom() {
 
         const noiseImgEl = document.querySelector('.noise-img'); //récupère l'élément img dans le DOM
-        console.log("random")
         try {
             let res;
             res = await fetch(`${API_URL}?base64`); //fait une requête à l'api
@@ -59,14 +57,14 @@
         datas = Object.fromEntries(formData); //met les données dans un objet : { red : num, green: num, blue: num } pour y accéder facilement
         getAdvanced(datas.red, datas.green, datas.blue, datas.hex, datas.nbTiles, datas.tileSize, datas.borderWidth, datas.mode, datas.brightnessSteps, datas.brightnessMultiplicator);
     }
-    
+
 
     async function getAdvanced(red, green, blue, hex, nbTiles = 50, tileSize = 7, borderWidth = 0, mode = "around", brightnessSteps = 5, brightnessMultiplicator = 1.5) {
 
         const noiseImgEl = document.querySelector('.noise-img'); //récupère l'élément img dans le DOM
         try {
             let res;
-            
+
             if (hex === "") {
                 res = await fetch(`${API_URL}?r=${red}&g=${green}&b=${blue}&tiles=${nbTiles}&tileSize=${tileSize}&borderWidth=${borderWidth}&mode=${mode}&steps=${brightnessSteps}&multi=${brightnessMultiplicator}&base64`); //fait une requête à l'api
             } else {
