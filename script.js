@@ -5,7 +5,9 @@
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
 
-        noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit
+        if(noiseForm) {
+            noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit
+        }
         initBurgerMenu();
     }
 
