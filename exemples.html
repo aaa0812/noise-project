@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>Examples</title>
 </head>
-    <header>
+
+<body>
+    <header role="banner">
         <a href="index.html">MSN</a>
-        <nav>
+
+        <nav role="navigation" aria-label="Menu principal">
+            <button class="burger" aria-label="Ouvrir le Menu">
+                ☰
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="random.html">Random</a></li>
@@ -18,15 +25,17 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main role="main">
         <h1 data-text="Examples">Examples</h1>
         <p>Some examples with uses of noise !</p>
         <div class="examples-img">
-        <img src="./src/examples/msn.jpg" alt="">
-        <img src="./src/examples/noize.jpg" alt="">
-        <img src="./src/examples/noise.jpg" alt="">
-        <img src="./src/examples/noise2.jpg" alt="">
-        <img src="./src/examples/noise3.jpg" alt="">
-        <img src="./src/examples/noise4.jpg" alt="">
-        <img src="./src/examples/noise5.jpg" alt="">
+            <img src="./src/examples/msn.jpg" alt="">
+            <img src="./src/examples/noize.jpg" alt="">
+            <img src="./src/examples/noise.jpg" alt="">
+            <img src="./src/examples/noise2.jpg" alt="">
+            <img src="./src/examples/noise3.jpg" alt="">
+            <img src="./src/examples/noise4.jpg" alt="">
+            <img src="./src/examples/noise5.jpg" alt="">
         </div>
+    </main>
+</body>

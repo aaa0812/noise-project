@@ -1,20 +1,20 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
-    <title>Document</title>
+    <title>Home</title>
 </head>
 
 <body>
-    <header>
+    <header role="banner">
         <a href="index.html">MSN</a>
 
-        <nav>
-            <button class="burger" aria-label="Menu">
+        <nav role="navigation" aria-label="Menu principal">
+            <button class="burger" aria-label="Ouvrir le Menu">
                 ☰
             </button>
             <ul>
@@ -25,7 +25,7 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main role="main">
         <h1 data-text="Make Some Noise">Make Some Noise</h1>
         <p>With Make Some Noise, generate everything you want ! Except if it is not noise.</p>
         <form class="noise-form" method="get">
@@ -64,8 +64,8 @@
                     Borderwidth (0-15)
                     <input id="borderWidth" name="borderWidth" type="range" min="0" max="15" value="0" />
                 </label>
-                <div class="radio-container">
-                    <p class="radio-legend">Color Calculation Mode</p>
+                <fieldset class="radio-container">
+                    <legend class="radio-legend">Color Calculation Mode</legend>
                     <label for="brightnessMode" class="radio">
                         <input id="brightnessMode" name="mode" type="radio" value="brightness" />
                         Brightness
@@ -74,7 +74,7 @@
                         <input id="aroundMode" name="mode" type="radio" value="around" checked />
                         Around
                     </label>
-                </div>
+                </fieldset>
                 <label for="brightnessMultiplicator">
                     Brightness Multiplicator
                     <input id="brightnessMultiplicator" name="brightnessMultiplicator" type="range" min="0.1" max="100"
@@ -88,7 +88,7 @@
             <button type="submit" id="noise-btn" class="btn" data-text="Generate">Generate</button>
         </form>
     </main>
-    <footer>
+    <footer role="contentinfo">
         <div>
             
         </div>

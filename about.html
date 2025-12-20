@@ -1,15 +1,22 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="style.css" />
     <script src="script.js"></script>
     <title>About</title>
 </head>
-    <header>
+
+<body>
+    <header role="banner">
         <a href="index.html">MSN</a>
-        <nav>
+
+        <nav role="navigation" aria-label="Menu principal">
+            <button class="burger" aria-label="Ouvrir le Menu">
+                ☰
+            </button>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="random.html">Random</a></li>
@@ -18,9 +25,12 @@
             </ul>
         </nav>
     </header>
-    <main>
+    <main role="main">
         <h1 data-text="about">about</h1>
         <p>This website is for our noise lovers !!
-        <br>
-        PHP-Noise is a free and Open Source «Noise Background Image» generator which allows you to create your very own background images.</p>
-        
+            <br>
+            PHP-Noise is a free and Open Source «Noise Background Image» generator which allows you to create your very
+            own background images.
+        </p>
+    </main>
+</body>
