@@ -20,17 +20,66 @@
     src: url(/src/fonts/SourceCodePro-Italic-VariableFont_wght.ttf);
 }
 
+/*-----------------------------------------HEADER-----------------------------------------------*/
+
 header {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 24px;
+    padding: 12px 24px;
     border: solid 2px var(--light-blue);
-    padding-block: 0.35em 0.625em;
-    padding-inline: 0.75em;
     border-width: 2px;
     border-radius: 16px;
+}
+
+.crt-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 148px;
+    cursor: pointer;
+    padding: 8px 16px;
+    border-radius: 8px;
+    position: relative;
+}
+
+.crt-check::before {
+    content: 'OFF';
+    color: var(--darker-blue);
+}
+
+.crt-check input {
+    appearance: none;
+    position: absolute;
+}
+
+.crt-check:has(input:checked) {
+    box-shadow: 0 0 12px var(--shadow-blue) inset, 0 0 8px var(--pink) inset;
+    animation: on-off 0.1s ease-in 1;
+}
+
+.crt-check:has(input:checked)::before {
+    content: 'ON';
+    color: var(--pink);
+}
+
+.crt-check:has(input:focus-visible) {
+    outline: auto;
+}
+
+@keyframes on-off {
+    0% {
+        transform: skewX(-10deg);
+    }
+    33% {
+        transform: skewX(-45deg);
+    }
+    100% {
+        transform: skewX(-10deg);
+    }
+
 }
 
 ul {
@@ -77,13 +126,14 @@ a {
     color: var(--light-blue);
 }
 
-/*-------------------------------------------------------------------------------------------------*/
+/*---------------------------------------------BODY----------------------------------------------------*/
 
 body {
     background-color: var(--background-color);
     color: var(--light-blue);
     text-align: center;
     position: relative;
+    font-family: 'Source Code';
 }
 
 .effect-class::before {
@@ -123,9 +173,7 @@ body {
     }
 }
 
-body {
-    font-family: 'Source Code';
-}
+/*-------------------------------------MAIN--------------------------------------------*/
 
 p {
     margin: 0;
