@@ -270,6 +270,14 @@ form {
     display: block;
     z-index: 100;
 }
+#random-img {
+    width: 30%;
+    display: block;
+    margin: 0 auto;
+    margin-block-end: 2em;
+    z-index: 100;
+}
+
 
 /*---------------------------------------css images page exemple----------------------------------------------*/
 
@@ -502,6 +510,17 @@ form p {
 footer {
     width: 80%;
     display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: center;
+    margin: 0 auto;
+
+    padding: 24px;
+    border: solid 2px var(--light-blue);
+    padding-block: 0.35em 0.625em;
+    padding-inline: 0.75em;
+    border-width: 2px;
+    border-radius: 16px;
+
 }
 
 footer ul {
@@ -509,11 +528,30 @@ footer ul {
     list-style: none;
 }
 
-.footer {
+.nav-footer {
+    display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: center;
     text-align: start;
-    grid-column: 2 / 3;
+    grid-column: 1;
+}
+
+.logo-footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    grid-column: 2;
+
+}
+
+.imac-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: start;
+    grid-column: 3;
+
 }
 
 
@@ -567,4 +605,22 @@ footer ul {
         grid-row: auto;
         height: 300px;
     }
+
+    footer {
+        width: 95%;
+        grid-template-columns: 1fr; /* une seule colonne */
+        gap: 24px;
+        text-align: center;
+    }
+
+    footer > * {
+        justify-content: center;
+    }
+
+    footer ul {
+        justify-content: center;
+        flex-wrap: wrap; /* si beaucoup de liens */
+        gap: 16px;
+    }
 }
+
