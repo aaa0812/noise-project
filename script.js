@@ -4,9 +4,15 @@
 
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
+        const crtToggle = document.querySelector('.crt-check input');
+        const body = document.querySelector('body');
 
-        if(noiseForm) {
+        if (noiseForm) {
             noiseForm.addEventListener("submit", handleSubmit); //écoute la soumission du formulaire pour appeler la méthode handlesubmit
+        }
+
+        if (crtToggle) {
+            crtToggle.addEventListener("click", () => { body.classList.toggle('effect-class') });
         }
         initBurgerMenu();
     }

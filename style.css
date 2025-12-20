@@ -86,7 +86,7 @@ body {
     position: relative;
 }
 
-body::before {
+.effect-class::before {
     content: '';
     position: absolute;
     top: 0;
@@ -102,7 +102,7 @@ body::before {
     z-index: 10;
 }
 
-body::after {
+.effect-class::after {
     content: '';
     position: absolute;
     left: 0;
@@ -316,7 +316,7 @@ label>input {
     margin-top: 4px;
 }
 
-input {
+form input {
     width: 100%;
     box-sizing: border-box;
     height: 24px;
@@ -336,7 +336,7 @@ input::placeholder {
 }
 
 .radio-legend {
-    font-size: 1rem;
+    font-size: 0.75rem;
 }
 
 .radio {
