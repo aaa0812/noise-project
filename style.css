@@ -513,6 +513,7 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     align-items: center;
     margin: 0 auto;
+    gap: 16px;
 
     padding: 24px;
     border: solid 2px var(--light-blue);
@@ -523,11 +524,46 @@ footer {
 
 }
 
-footer ul {
-    gap: 32px;
-    list-style: none;
+footer > * {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
 }
 
+footer > a {
+    text-decoration: none;
+    color: inherit;
+    font-weight: bold;
+}
+
+footer a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: inherit;
+    height: 100%;
+}
+
+footer ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+footer ul {
+    display: flex;
+    gap: 32px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+footer p {
+    margin: 0;
+    text-align: center;
+}
+/*
 .nav-footer {
     display: flex;
     align-items: center;
@@ -552,7 +588,7 @@ footer ul {
     text-align: start;
     grid-column: 3;
 
-}
+}*/
 
 
 @media screen and (min-width: 760px) {
