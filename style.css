@@ -190,6 +190,11 @@ body {
 
 /*-------------------------------------MAIN--------------------------------------------*/
 
+
+main {
+    padding-bottom: 16px;
+}
+
 p {
     margin: 0;
 }
@@ -283,12 +288,14 @@ form {
     display: block;
     z-index: 9;
 }
+
 #random-img {
-    width: 30%;
+    width: 80%;
+    position: relative;
     display: block;
     margin: 0 auto;
     margin-block-end: 2em;
-    z-index: 100;
+    z-index: 8;
 }
 
 
@@ -574,33 +581,6 @@ footer p {
     margin: 0;
     text-align: center;
 }
-/*
-.nav-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: start;
-    grid-column: 1;
-}
-
-.logo-footer {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: start;
-    grid-column: 2;
-
-}
-
-.imac-text {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: start;
-    grid-column: 3;
-
-}*/
-
 
 @media screen and (min-width: 768px) {
 
@@ -637,6 +617,10 @@ footer p {
 
     .radio-container {
         display: block;
+    }
+
+    #random-img {
+        width: 30%;
     }
 
     footer {
