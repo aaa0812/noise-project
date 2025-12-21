@@ -442,7 +442,6 @@ form p {
     box-shadow: 0 0 20px var(--shadow-blue), 0 0 12px var(--pink);
     transition: transform 0.1s ease-in;
 }
-
 .btn::before,
 .btn::after {
     content: attr(data-text);
