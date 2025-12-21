@@ -1,10 +1,13 @@
 (function () {
     const API_URL = "https://php-noise.com/noise.php";
     const audioClick = new Audio("src/sound-effects/click1.mp3");
+    audioClick.volume = 0.1;
     const crtON = new Audio("src/sound-effects/crton.mp3");
     crtON.volume = 0.1;
     const crtOFF = new Audio("src/sound-effects/crtoff.mp3");
     crtOFF.volume = 0.1;
+    const generateClick = new Audio("src/sound-effects/generate5.mp3");
+    generateClick.volume = 0.1;
     document.addEventListener('DOMContentLoaded', init);
 
     async function init() {
@@ -58,6 +61,7 @@
             let res;
             res = await fetch(`${API_URL}?base64`); //fait une requête à l'api
             if (res.ok) { //si la réponse est bonne
+                generateClick.play()
                 const body = await res.json(); //converti la réponse en json pour pouvoir la lire
                 noiseImgEl.setAttribute("src", body.base64); //récupére la propriété base64 de l'objet pour le mettre dans le src de l'élément image
             }
@@ -91,6 +95,7 @@
                 res = await fetch(`${API_URL}?hex=${hex}&tiles=${nbTiles}&tileSize=${tileSize}&borderWidth=${borderWidth}&mode=${mode}&steps=${brightnessSteps}&multi=${brightnessMultiplicator}&base64`);
             }
             if (res.ok) { //si la réponse est bonne
+                generateClick.play()
                 const body = await res.json(); //converti la réponse en json pour pouvoir la lire
                 noiseImgEl.setAttribute("src", body.base64); //récupére la propriété base64 de l'objet pour le mettre dans le src de l'élément image
             }
