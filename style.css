@@ -515,11 +515,7 @@ form p {
     margin: 4em auto;
     max-width: 1200px;
 }
-.creators h2{
-    margin-bottom:1.5em;
-    font-style: italic;
-    text-shadow:0 0 20px var(--shadow-blue), 0 0 8px var(--pink);
-}
+
 .creatorsgrid{
     display: grid;
     grid-template-columns:1fr;
