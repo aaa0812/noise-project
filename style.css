@@ -313,6 +313,7 @@ form {
     gap: 50px;
     max-width: 1300px;
     margin: 2em;
+    align-items: center;
 
 }
 
