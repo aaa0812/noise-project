@@ -1,5 +1,6 @@
 :root {
     --background-color: #0A1117;
+    --background-color-transparant: #0a1117c4;
     --light-blue: #ACECEE;
     --darker-blue: #0099FF;
     --shadow-blue: #0099ff90;
@@ -46,7 +47,7 @@ header {
     border-width: 2px;
     border-radius: 16px;
     z-index: 10;
-    background-color: var(--background-color);
+    background-color: var(--background-color-transparant);
 }
 
 .crt-check {
