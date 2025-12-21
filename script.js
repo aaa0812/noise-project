@@ -5,6 +5,8 @@
     crtON.volume = 0.1;
     const crtOFF = new Audio("src/sound-effects/crtoff.mp3");
     crtOFF.volume = 0.1;
+    const hoverSound = new Audio("src/sound-effects/hover.mp3");
+    hoverSound.volume=0.1;
     document.addEventListener('DOMContentLoaded', init);
 
     async function init() {
@@ -31,6 +33,12 @@
         initBurgerMenu();
     }
 
+    function initHoverSounds(){
+        const HoverUse = document.querySelector('.creatorscard');
+        if (!body.classList.contains('hover-class')){
+            hoverSound.play()
+        }
+    }
     function initBurgerMenu() {
         const burger = document.querySelector('.burger');
         const menu = document.querySelector('nav ul');
