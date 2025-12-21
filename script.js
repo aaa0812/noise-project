@@ -10,33 +10,17 @@
     generateClick.volume = 0.1;
     document.addEventListener('DOMContentLoaded', init);
 
-    document.addEventListener("DOMContentLoaded", () => {
-    const hoverSound = new Audio("src/sound-effects/hover2.mp3");
-    hoverSound.volume=0.1;
-    const hoverTarget = document.querySelectorAll(".btn, .creatorscard");
-    
-    hoverTarget.forEach(el => {
-        el.addEventListener("mouseenter", () => {
-            hoverSound.currentTime = 0;
-            hoverSound.play();
-        });
-
-        //pour couper le son hover quand la souris sort de l'objet, je trouve ça rend moins bien
-        /*el.addEventListener("mouseleave", () => {
-            hoverSound.pause();
-            hoverSound.currentTime = 0;
-        });*/
-    });
-});
-
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
         const crtToggle = document.querySelector('.crt-check input');
         const random = document.querySelector('.random-btn');
         const logo = document.getElementById('logo');
+        const hoverSound = new Audio("src/sound-effects/hover2.mp3");
+        hoverSound.volume = 0.1;
+        const hoverTarget = document.querySelectorAll(".btn, .creatorscard");
 
         if (logo) {
-            logo.addEventListener("click", audioClick.play());
+            logo.addEventListener("click", () => audioClick.play());
         }
 
         if (random) {
@@ -50,15 +34,16 @@
         if (crtToggle) {
             crtToggle.addEventListener("click", toggleCrt);
         }
+
+        hoverTarget.forEach(el => {
+            el.addEventListener("mouseenter", () => {
+                hoverSound.currentTime = 0;
+                hoverSound.play();
+            });
+        });
         initBurgerMenu();
     }
 
-    function initHoverSounds(){
-        const HoverUse = document.querySelector('.creatorscard');
-        if (!body.classList.contains('hover-class')){
-            hoverSound.play()
-        }
-    }
     function initBurgerMenu() {
         const burger = document.querySelector('.burger');
         const menu = document.querySelector('nav ul');
@@ -80,13 +65,12 @@
     }
 
     async function handleRandom() {
-
         const noiseImgEl = document.querySelector('.noise-img'); //récupère l'élément img dans le DOM
+        generateClick.play();
         try {
             let res;
             res = await fetch(`${API_URL}?base64`); //fait une requête à l'api
             if (res.ok) { //si la réponse est bonne
-                generateClick.play()
                 const body = await res.json(); //converti la réponse en json pour pouvoir la lire
                 noiseImgEl.setAttribute("src", body.base64); //récupére la propriété base64 de l'objet pour le mettre dans le src de l'élément image
             }
@@ -102,14 +86,13 @@
     function handleSubmit(e) {
         e.preventDefault();
         let formData = new FormData(e.target); //crée un FormData à partir de l'élément html pour avoir accès aux données des input
-
+        generateClick.play();
         datas = Object.fromEntries(formData); //met les données dans un objet : { red : num, green: num, blue: num } pour y accéder facilement
         getAdvanced(datas.red, datas.green, datas.blue, datas.hex, datas.nbTiles, datas.tileSize, datas.borderWidth, datas.mode, datas.brightnessSteps, datas.brightnessMultiplicator);
     }
 
 
     async function getAdvanced(red, green, blue, hex, nbTiles = 50, tileSize = 7, borderWidth = 0, mode = "around", brightnessSteps = 5, brightnessMultiplicator = 1.5) {
-
         const noiseImgEl = document.querySelector('.noise-img'); //récupère l'élément img dans le DOM
         try {
             let res;
@@ -120,7 +103,6 @@
                 res = await fetch(`${API_URL}?hex=${hex}&tiles=${nbTiles}&tileSize=${tileSize}&borderWidth=${borderWidth}&mode=${mode}&steps=${brightnessSteps}&multi=${brightnessMultiplicator}&base64`);
             }
             if (res.ok) { //si la réponse est bonne
-                generateClick.play()
                 const body = await res.json(); //converti la réponse en json pour pouvoir la lire
                 noiseImgEl.setAttribute("src", body.base64); //récupére la propriété base64 de l'objet pour le mettre dans le src de l'élément image
             }
