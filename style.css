@@ -86,6 +86,10 @@ header {
     outline: auto;
 }
 
+a#logo{
+    padding: 5px;
+}
+
 @keyframes on-off {
     0% {
         transform: skewX(-10deg);
@@ -518,7 +522,7 @@ form p {
 }
 .creatorsgrid{
     display: grid;
-    grid-template-columns: repeat(1,3fr);
+    grid-template-columns:1fr;
     gap:32px;
 }
 
@@ -538,7 +542,15 @@ form p {
     transform: translateY(-7px);
     box-shadow: 0 0 30px var(--shadow-blue);
 }
+.creatorscard img{
+    width: 90px;
+    height: 90px;
+    border-radius: 20px;
+}
 
+.infos{
+    text-align: start;
+}
 @keyframes glitch-btn {
     0% {
         transform: translate(-50%, -50%);
