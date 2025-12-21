@@ -9,10 +9,13 @@
     <title>Random</title>
 </head>
 
-<body>
+<body class="effect-class">
     <header role="banner">
-        <a href="index.html">MSN</a>
-
+        <a href="index.html" id="logo">MSN</a>
+        <label class="crt-check" for="crt">
+            <input type="checkbox" id="crt" checked/>
+            CRT Effects
+        </label>
         <nav role="navigation" aria-label="Menu principal">
             <button class="burger" aria-label="Ouvrir le Menu">
                 ☰
@@ -29,13 +32,21 @@
 
         <h1 data-text="Random"> Random</h1>
 
-        <img src="https://placecats.com/300/300" alt="" class="noise-img" />
+        <img src="https://placecats.com/300/300" alt="" class="noise-img" id="random-img" />
 
-        <button type="submit" id="noise-btn" class="btn" data-text="Generate">Generate</button>
-        <img src="" alt="" class="noise-img" />
-
+        <button id="noise-btn" class="btn random-btn" data-text="Generate">Generate</button>
+        <img src="" alt="" class="noise-img"/>
+        
     </main>
-    <footer>
+    <footer role="contentinfo">
+        <a href="index.html">MSN</a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="random.html">Random</a></li>
+            <li><a href="exemples.html">Examples</a></li>
+            <li><a href="about.html">About</a></li>
+        </ul>
+        <p>This website was created in the context of our web-development class in IMAC</p>
     </footer>
 </body>
 
