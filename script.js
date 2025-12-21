@@ -18,6 +18,7 @@
         const hoverSound = new Audio("src/sound-effects/hover2.mp3");
         hoverSound.volume = 0.1;
         const hoverTarget = document.querySelectorAll(".btn, .creatorscard");
+        const burger = document.querySelector('.burger');
 
         if (logo) {
             logo.addEventListener("click", () => audioClick.play());
@@ -35,22 +36,19 @@
             crtToggle.addEventListener("click", toggleCrt);
         }
 
+        burger.addEventListener("click", handleBurgerMenu);
+
         hoverTarget.forEach(el => {
             el.addEventListener("mouseenter", () => {
                 hoverSound.currentTime = 0;
                 hoverSound.play();
             });
         });
-        initBurgerMenu();
     }
 
-    function initBurgerMenu() {
-        const burger = document.querySelector('.burger');
+    function handleBurgerMenu() {
         const menu = document.querySelector('nav ul');
-
-        burger.addEventListener('click', () => {
-            menu.classList.toggle('active');
-        });
+        menu.classList.toggle('active');
     }
 
     function toggleCrt() {
