@@ -50,6 +50,10 @@ header {
     background-color: var(--background-color-transparant);
 }
 
+header #logo img{
+    height: 32px;
+}
+
 .crt-check {
     display: flex;
     align-items: center;
