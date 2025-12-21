@@ -1,12 +1,21 @@
 (function () {
     const API_URL = "https://php-noise.com/noise.php";
+    const audioClick = new Audio("src/sound-effects/click1.mp3");
+    const crtON = new Audio("src/sound-effects/crton.mp3");
+    crtON.volume = 0.1;
+    const crtOFF = new Audio("src/sound-effects/crtoff.mp3");
+    crtOFF.volume = 0.1;
     document.addEventListener('DOMContentLoaded', init);
 
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
         const crtToggle = document.querySelector('.crt-check input');
-        const body = document.querySelector('body');
         const random = document.querySelector('.random-btn');
+        const logo = document.getElementById('logo');
+
+        if (logo) {
+            logo.addEventListener("click", audioClick.play());
+        }
 
         if (random) {
             random.addEventListener("click", handleRandom);
@@ -17,7 +26,7 @@
         }
 
         if (crtToggle) {
-            crtToggle.addEventListener("click", () => { body.classList.toggle('effect-class') });
+            crtToggle.addEventListener("click", toggleCrt);
         }
         initBurgerMenu();
     }
@@ -29,6 +38,17 @@
         burger.addEventListener('click', () => {
             menu.classList.toggle('active');
         });
+    }
+
+    function toggleCrt() {
+        const body = document.querySelector('body');
+
+        if (!body.classList.contains('effect-class')) {
+            crtON.play()
+        } else {
+            crtOFF.play()
+        }
+        body.classList.toggle('effect-class');
     }
 
     async function handleRandom() {
