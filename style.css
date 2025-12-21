@@ -531,6 +531,12 @@ form p {
     padding: 12px;
     border: solid 2px;
     box-shadow: 0 0 24px var(--shadow-blue), 0 0 12px var(--pink), inset 0 0 12px var(--shadow-blue), inset 0 0 6px var(--pink);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.creatorscard:hover{
+    transform: translateY(-7px);
+    box-shadow: 0 0 30px var(--shadow-blue);
 }
 
 @keyframes glitch-btn {
