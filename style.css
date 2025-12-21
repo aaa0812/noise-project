@@ -689,13 +689,11 @@ footer p {
 @media (max-width: 768px) {
 
     .examples-img {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column;
+        gap:32px;
+        margin:2em;
     }
 
-    .examples-img {
-        grid-column: auto;
-        grid-row: auto;
-        height: 300px;
-    }
 }
 
