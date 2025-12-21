@@ -6,11 +6,28 @@
     crtON.volume = 0.1;
     const crtOFF = new Audio("src/sound-effects/crtoff.mp3");
     crtOFF.volume = 0.1;
-    const hoverSound = new Audio("src/sound-effects/hover.mp3");
-    hoverSound.volume=0.1;
     const generateClick = new Audio("src/sound-effects/generate5.mp3");
     generateClick.volume = 0.1;
     document.addEventListener('DOMContentLoaded', init);
+
+    document.addEventListener("DOMContentLoaded", () => {
+    const hoverSound = new Audio("src/sound-effects/hover2.mp3");
+    hoverSound.volume=0.1;
+    const hoverTarget = document.querySelectorAll(".btn, .creatorscard");
+    
+    hoverTarget.forEach(el => {
+        el.addEventListener("mouseenter", () => {
+            hoverSound.currentTime = 0;
+            hoverSound.play();
+        });
+
+        //pour couper le son hover quand la souris sort de l'objet, je trouve ça rend moins bien
+        /*el.addEventListener("mouseleave", () => {
+            hoverSound.pause();
+            hoverSound.currentTime = 0;
+        });*/
+    });
+});
 
     async function init() {
         const noiseForm = document.querySelector('.noise-form'); //récupère le form dans le DOM
